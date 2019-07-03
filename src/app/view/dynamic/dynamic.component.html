@@ -1,7 +1,17 @@
-<div>
-  <h2>Dynamic content</h2>
-  <h3>Context: <input type="text" [(ngModel)]="context.text"></h3>
-  <dynamic-content type="sample1" [context]="context"></dynamic-content>
-  <dynamic-content type="sample2" [context]="context"></dynamic-content>
-  <dynamic-content type="some-other-type" [context]="context"></dynamic-content>
+<div class="card">
+  <div class="card-header">
+    Dynamic content loader example
+  </div>
+  <div class="card-body">
+    <div class="row">
+      <div class="col-md-12">
+        <div>
+          <h3>Context: <input type="text" [(ngModel)]="context.text"></h3>
+          <dynamic-content type="sample1" [context]="context"></dynamic-content>
+          <dynamic-content type="sample2" [context]="context"></dynamic-content>
+          <dynamic-content type="some-other-type" [context]="context"></dynamic-content>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
