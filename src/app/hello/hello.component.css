@@ -1,0 +1,20 @@
+h4 { font-family: "Comic Sans MS", cursive, sans-serif; color: #777; padding-bottom: 5px;}
+  h4 > div:first-child {
+    color: blue;
+    margin-top: .5rem;
+  }
+  h4 > div:first-child::after {
+    display: flex;
+    content: '';
+    margin: .5rem 0;
+    border-bottom: 1px solid #ccc;
+  }
+  h4 > div:last-child::after {
+    display: flex;
+    content: '';
+    margin-top: .75rem;
+    border-bottom: 1px solid #ccc;
+  }
+  h4 > div > span:last-child {
+    color: red;
+  }
