@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Store, select } from '@ngrx/store';
-import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-view',
@@ -9,9 +7,16 @@ import { Observable } from 'rxjs';
 })
 export class ViewComponent implements OnInit {
   name = 'Angular Ngrx';
+  inProduction: boolean;
+  isNavbarCollapsed: boolean;
+  languages: any[];
+  swaggerEnabled: boolean;
+  version: string;
 
   constructor(
-  ) { }
+  ) {
+    this.isNavbarCollapsed = true;
+  }
 
   ngOnInit() {
 
