@@ -22,4 +22,8 @@ export class ViewComponent implements OnInit {
 
   }
 
+  toggleNavbar() {
+    this.isNavbarCollapsed = !this.isNavbarCollapsed;
+  }
+
 }
