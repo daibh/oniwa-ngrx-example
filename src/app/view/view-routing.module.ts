@@ -4,6 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { ViewComponent } from './view.component';
 import { DynamicComponent } from './dynamic/dynamic.component';
 import { RuntimeComponent } from './runtime/runtime.component';
+import { BehaviorSubjectComponent } from './behavior-subject/behavior-subject.component';
 
 const routes: Routes = [
   {
@@ -38,6 +39,13 @@ const routes: Routes = [
         component: RuntimeComponent,
         data: {
           title: 'Runtime content loader'
+        }
+      },
+      {
+        path: 'behavior-subject',
+        component: BehaviorSubjectComponent,
+        data: {
+          title: 'Behavior subject'
         }
       }
     ],

@@ -13,6 +13,9 @@ import { ViewRoutingModule } from './view-routing.module';
 import { ViewComponent } from './view.component';
 import { ViewEffects } from './view.effects';
 import { FEATURE_NAME, reducers } from './view.state';
+import { BehaviorSubjectComponent } from './behavior-subject/behavior-subject.component';
+import { ParentComponent } from './behavior-subject/parent/parent.component';
+import { ChildComponent } from './behavior-subject/child/child.component';
 
 @NgModule({
   imports: [
@@ -36,12 +39,16 @@ import { FEATURE_NAME, reducers } from './view.state';
     DynamicContentComponent,
     // runtime component declaration
     RuntimeComponent,
-    RuntimeContentComponent
+    RuntimeContentComponent,
+    BehaviorSubjectComponent,
+    ParentComponent,
+    ChildComponent
   ],
   entryComponents: [
       DynamicSample1Component, 
       DynamicSample2Component, 
       UnknownDynamicComponent
-  ]
+  ],
+  exports: []
 })
 export class ViewModule { }

@@ -1,0 +1,21 @@
+<div class="parent">
+  <h5>Here is parent component</h5>
+  <div class="talk-conversion">
+    <div class="media border p-3" *ngFor="let item of talkContents">
+      <span *ngIf="item.obj === 'child'" class="mr-3 mt-3 rounded-circle"> C </span>
+      <div class="media-body">
+        <p>{{item.message}}</p>
+      </div>
+      <span *ngIf="item.obj === 'parent'" class="ml-3 mt-3 rounded-circle"> P </span>
+    </div>
+  </div>
+  <div>
+    <div class="form-group">
+      <label for="obj">What do want to say:</label>
+      <input id="tmp" class="form-control" [(ngModel)]="content" (keydown.enter)="doSay()" />
+    </div>
+    <button (click)="doSay()">Say now</button>
+  </div>
+  <hr *ngIf="hasChild" />
+  <app-child *ngIf="hasChild"></app-child>
+</div>

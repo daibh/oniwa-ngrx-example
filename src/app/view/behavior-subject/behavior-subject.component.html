@@ -1,0 +1,43 @@
+<div class="card">
+  <div class="card-header">
+    Behavior subject example
+  </div>
+  <div class="card-body">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card-columns">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">
+                <blockquote class="blockquote mb-0">
+                  Component nested
+                </blockquote>
+              </h5>
+              <div>
+                <div class="card-text">
+                  <app-parent [hasChild]="true"></app-parent>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">
+                <blockquote class="blockquote mb-0">
+                  Component not nested
+                </blockquote>
+              </h5>
+              <div>
+                <div class="card-text">
+                    <app-parent></app-parent>
+                    <hr />
+                    <app-child></app-child>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
