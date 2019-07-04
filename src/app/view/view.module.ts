@@ -16,6 +16,7 @@ import { FEATURE_NAME, reducers } from './view.state';
 import { BehaviorSubjectComponent } from './behavior-subject/behavior-subject.component';
 import { ParentComponent } from './behavior-subject/parent/parent.component';
 import { ChildComponent } from './behavior-subject/child/child.component';
+import { CancelSubscriptionComponent } from './cancel-subscription/cancel-subscription.component';
 
 @NgModule({
   imports: [
@@ -42,7 +43,8 @@ import { ChildComponent } from './behavior-subject/child/child.component';
     RuntimeContentComponent,
     BehaviorSubjectComponent,
     ParentComponent,
-    ChildComponent
+    ChildComponent,
+    CancelSubscriptionComponent
   ],
   entryComponents: [
       DynamicSample1Component, 

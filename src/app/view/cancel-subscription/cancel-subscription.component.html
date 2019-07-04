@@ -1,0 +1,87 @@
+<div class="card">
+  <div class="card-header">
+    Cancel subscription example
+    <button (click)="doCancelSubscription()" class="mb-2">Cancel subscription</button>
+    <button (click)="doDispatchData()" class="mb-2 ml-2">Fetch one</button>
+  </div>
+  <div class="card-body">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card-columns">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">
+                <blockquote class="blockquote mb-0">
+                  Cancel subscription <span *ngIf="firstStoreValue">{{firstStoreValue.length}}</span>
+                </blockquote>
+              </h5>
+              <div>
+                <div class="card-text">
+                  <div class="talk-conversion">
+                    <div class="media border p-3" *ngFor="let item of firstStoreValue">
+                      <span *ngIf="item.obj === 'child'" class="mr-3 mt-3 rounded-circle"> C </span>
+                      <div class="media-body">
+                        <p>{{item.from}}</p>
+                        <blockquote class="blockquote mb-0">
+                          {{item.now}}
+                        </blockquote>
+                      </div>
+                      <span *ngIf="item.obj === 'parent'" class="ml-3 mt-3 rounded-circle"> P </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">
+                <blockquote class="blockquote mb-0">
+                  Un-cancel subscription <span *ngIf="secondStoreValue">{{secondStoreValue.length}}</span>
+                </blockquote>
+              </h5>
+              <div>
+                <div class="card-text">
+                  <div class="talk-conversion">
+                    <div class="media border p-3" *ngFor="let item of secondStoreValue">
+                      <div class="media-body">
+                        <p>{{item.from}}</p>
+                        <blockquote class="blockquote mb-0">
+                          {{item.now}}
+                        </blockquote>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">
+                <blockquote class="blockquote mb-0">
+                  Subscription from action <span *ngIf="thirdStoreValue">{{thirdStoreValue.length}}</span>
+                </blockquote>
+              </h5>
+              <div>
+                <div class="card-text">
+                  <button (click)="doShowFromAction()" class="mb-2">Addition</button>
+                  <div class="talk-conversion">
+                    <div class="media border p-3" *ngFor="let item of thirdStoreValue">
+                      <div class="media-body">
+                        <p>{{item.from}}</p>
+                        <blockquote class="blockquote mb-0">
+                          {{item.now}}
+                        </blockquote>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
