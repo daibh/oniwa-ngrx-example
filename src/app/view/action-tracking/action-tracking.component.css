@@ -1,0 +1,12 @@
+.card-columns {
+    column-count: 2;
+}
+
+:host ::ng-deep .rounded-circle {
+    width: 45px;
+    height: 45px;
+    border: 1px solid #ccc;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}

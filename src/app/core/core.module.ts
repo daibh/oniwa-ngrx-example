@@ -13,6 +13,8 @@ import { reducers, metaReducers } from './core.state';
 import { AppErrorHandler } from './error-handler/app-error-handler.service';
 import { LocalStorageService } from './local-storage/local-storage.service';
 import { httpInterceptorProviders } from './interceptors';
+import { EntityDataModule } from '@ngrx/data';
+import { entityConfig } from '../view/view-metadata';
 
 @NgModule({
   imports: [
@@ -27,6 +29,7 @@ import { httpInterceptorProviders } from './interceptors';
     StoreDevtoolsModule.instrument({
       name: 'Angular NgRx Starter'
     }),
+    EntityDataModule.forRoot(entityConfig)
   ],
   declarations: [],
   providers: [

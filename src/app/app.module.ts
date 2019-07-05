@@ -9,7 +9,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { SharedModule } from './shared/shared.module';
 import { CoreModule } from './core/core.module';
 
-
 @NgModule({
   imports:      [ 
     BrowserModule,

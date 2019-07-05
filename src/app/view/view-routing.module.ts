@@ -6,6 +6,7 @@ import { DynamicComponent } from './dynamic/dynamic.component';
 import { RuntimeComponent } from './runtime/runtime.component';
 import { BehaviorSubjectComponent } from './behavior-subject/behavior-subject.component';
 import { CancelSubscriptionComponent } from './cancel-subscription/cancel-subscription.component';
+import { ActionTrackingComponent } from './action-tracking/action-tracking.component';
 
 const routes: Routes = [
   {
@@ -54,6 +55,13 @@ const routes: Routes = [
         component: CancelSubscriptionComponent,
         data: {
           title: 'Cancel subscription'
+        }
+      },
+      {
+        path: 'action-tracking',
+        component: ActionTrackingComponent,
+        data: {
+          title: 'Action tracking'
         }
       }
     ],
