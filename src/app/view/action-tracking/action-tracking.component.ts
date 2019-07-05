@@ -50,10 +50,8 @@ export class ActionTrackingComponent implements OnInit {
       const data = this.actionTrackingForm.getRawValue();
       if (data.id && data.id.length) {
         this.update(data);
-        console.log('11', data.id);
       } else {
         this.add({ ...data });
-        console.log('22', data.id);
       }
       this.actionTrackingService.fetchAll().subscribe(res => {
         this.actionTrackings = res;
