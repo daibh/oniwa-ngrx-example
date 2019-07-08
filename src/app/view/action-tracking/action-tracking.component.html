@@ -19,8 +19,8 @@
                     <ng-container *ngIf="isEdit$ | async as isEdit">
                       <h6 *ngIf="!isEdit.value">Add new action tracking</h6>
                       <h6 *ngIf="isEdit.value">Edit existed action tracking</h6>
-                      <form name="form" role="form" [formGroup]="actionTrackingForm"
-                        (ngSubmit)="save(actionTrackingFormRef)" #actionTrackingFormRef="ngForm">
+                      <form name="form" role="form" [formGroup]="actionTrackingForm" (ngSubmit)="save()" #elRefForm
+                        #actionTrackingFormRef="ngForm">
                         <div class="form-group">
                           <label for="name">Name:</label>
                           <input id="name" [placeholder]="'Name'" formControlName="name" class="form-control" />
@@ -66,6 +66,18 @@
               </h5>
               <div>
                 <div class="card-text">
+                  <div class="col-md-12">
+                    <ng-container>
+                      <div class="card" *ngFor="let item of trackings;">
+                        <div class="card-header">
+                          #<span>{{item.type}}</span>
+                        </div>
+                        <div class="card-body" *ngIf="item['payload']">
+                          <span class="p-1">{{item['payload'] | json}}</span>
+                        </div>
+                      </div>
+                    </ng-container>
+                  </div>
                 </div>
               </div>
             </div>

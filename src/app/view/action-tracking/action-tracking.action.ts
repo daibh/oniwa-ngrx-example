@@ -1,5 +1,6 @@
 import { Action } from '@ngrx/store';
 import { ActionTracking } from './action-tracking.model';
+import { HttpErrorResponse } from '@angular/common/http';
 
 /**
  * For each action type in an action group, make a simple
@@ -34,67 +35,67 @@ export class FetchAll implements Action {
 export class FetchAllSuccess implements Action {
     readonly type = ActionTrackingActionTypes.FetchAllSuccess;
 
-    constructor(public payload: ActionTracking[]) { }
+    constructor(public payload: { data: ActionTracking[] }) { }
 }
 
 export class FetchAllFaild implements Action {
     readonly type = ActionTrackingActionTypes.FetchAllFaild;
 
-    constructor(public payload: ActionTracking[]) { }
+    constructor(public payload: { error: HttpErrorResponse }) { }
 }
 
 export class Create implements Action {
     readonly type = ActionTrackingActionTypes.Create;
 
-    constructor() { }
+    constructor(public payload: { item: ActionTracking }) { }
 }
 
 export class CreateSuccess implements Action {
     readonly type = ActionTrackingActionTypes.CreateSuccess;
 
-    constructor(public payload: ActionTracking[]) { }
+    constructor(public payload: { data: ActionTracking }) { }
 }
 
 export class CreateFaild implements Action {
     readonly type = ActionTrackingActionTypes.CreateFaild;
 
-    constructor(public payload: ActionTracking[]) { }
+    constructor(public payload: { error: HttpErrorResponse }) { }
 }
 
 export class Update implements Action {
     readonly type = ActionTrackingActionTypes.Update;
 
-    constructor() { }
+    constructor(public payload: { item: ActionTracking }) { }
 }
 
 export class UpdateSuccess implements Action {
     readonly type = ActionTrackingActionTypes.UpdateSuccess;
 
-    constructor(public payload: ActionTracking[]) { }
+    constructor(public payload: { data: ActionTracking }) { }
 }
 
 export class UpdateFaild implements Action {
     readonly type = ActionTrackingActionTypes.UpdateFaild;
 
-    constructor(public payload: ActionTracking[]) { }
+    constructor(public payload: { error: HttpErrorResponse }) { }
 }
 
 export class Delete implements Action {
     readonly type = ActionTrackingActionTypes.Delete;
 
-    constructor() { }
+    constructor(public payload: { id: string }) { }
 }
 
 export class DeleteSuccess implements Action {
     readonly type = ActionTrackingActionTypes.DeleteSuccess;
 
-    constructor(public payload: ActionTracking[]) { }
+    constructor(public payload: { data: any }) { }
 }
 
 export class DeleteFaild implements Action {
     readonly type = ActionTrackingActionTypes.DeleteFaild;
 
-    constructor(public payload: ActionTracking[]) { }
+    constructor(public payload: { error: HttpErrorResponse }) { }
 }
 
 /**

@@ -18,6 +18,7 @@ import { ViewRoutingModule } from './view-routing.module';
 import { ViewComponent } from './view.component';
 import { ViewEffects } from './view.effects';
 import { FEATURE_NAME, reducers } from './view.state';
+import { ActionTrackingEffects } from './action-tracking/action-tracking.effect';
 
 @NgModule({
   imports: [
@@ -26,7 +27,8 @@ import { FEATURE_NAME, reducers } from './view.state';
     ViewRoutingModule,
     StoreModule.forFeature(FEATURE_NAME, reducers),
     EffectsModule.forFeature([
-      ViewEffects
+      ViewEffects,
+      ActionTrackingEffects
     ])
   ],
   declarations: [
