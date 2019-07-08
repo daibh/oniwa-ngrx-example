@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { ActionTracking } from './action-tracking.model';
 import { Observable, of } from 'rxjs';
 import * as moment from 'moment';
-import { LocalStorageService } from 'src/app/core/local-storage/local-storage.service';
+import { LocalStorageService } from '../../core/local-storage/local-storage.service';
 
 @Injectable({
   providedIn: 'root'
