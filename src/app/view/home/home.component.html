@@ -7,6 +7,15 @@
 			<div class="col-md-12">
 				<h5>Examples below will be described the way use Ngrx associated Rxjs library in angular 7+</h5>
 			</div>
+			<div class="col-md-12">
+				<div class="col-md-3">
+					<ngx-date-range [(ngModel)]="dateRangeValue" (ngModelChange)="onChange($event, value)">
+					</ngx-date-range>
+				</div>
+			</div>
+			<hr />
+			Here is value of date range out of component: <br />
+			{{dateRangeValue | json}}
 		</div>
 	</div>
 </div>

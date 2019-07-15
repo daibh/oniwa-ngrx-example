@@ -1,0 +1,53 @@
+.date-input {
+    text-align: center;
+}
+
+.date-input.from {
+    border-right: none;
+}
+
+.date-input.to {
+    border-left: none;
+}
+
+.btn.btn-outline-secondary {
+    border-color: #ccc;
+}
+
+.input-group-append>span {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    justify-content: center;
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+.custom-day {
+    text-align: center;
+    padding: 0.185rem 0.25rem;
+    display: inline-block;
+    height: 2rem;
+    width: 2rem;
+}
+
+.custom-day.focused {
+    background-color: #e6e6e6;
+}
+
+.custom-day.range,
+.custom-day:hover {
+    background-color: rgb(2, 117, 216);
+    color: white;
+}
+
+.custom-day.faded {
+    background-color: rgba(2, 117, 216, 0.5);
+}
+
+.custom-day.today {
+    background-color: #448aff;
+}

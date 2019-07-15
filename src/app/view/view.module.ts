@@ -19,6 +19,7 @@ import { ViewComponent } from './view.component';
 import { ViewEffects } from './view.effects';
 import { FEATURE_NAME, reducers } from './view.state';
 import { ActionTrackingEffects } from './action-tracking/action-tracking.effect';
+import { NgxDateRangeComponent } from './ngx-date-range/ngx-date-range.component';
 
 @NgModule({
   imports: [
@@ -48,7 +49,8 @@ import { ActionTrackingEffects } from './action-tracking/action-tracking.effect'
     ParentComponent,
     ChildComponent,
     CancelSubscriptionComponent,
-    ActionTrackingComponent
+    ActionTrackingComponent,
+    NgxDateRangeComponent
   ],
   entryComponents: [
     DynamicSample1Component,
