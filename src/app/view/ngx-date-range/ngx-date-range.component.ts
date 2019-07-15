@@ -14,7 +14,6 @@ import { after, equals, NgbDateCustomParserFormatter, NgbDateMomentAdapter } fro
       useExisting: forwardRef(() => NgxDateRangeComponent),
       multi: true
     },
-    NgbDropdownConfig,
     { provide: NgbDateParserFormatter, useClass: NgbDateCustomParserFormatter },
     NgbDateMomentAdapter
   ]
@@ -22,20 +21,13 @@ import { after, equals, NgbDateCustomParserFormatter, NgbDateMomentAdapter } fro
 export class NgxDateRangeComponent implements OnInit {
 
   dateValue: any;
-  dateRangeValue: any;
   fromDate: any;
   toDate: any;
-  fromDateInput: any;
-  toDateInput: any;
-  fromDateTemp: any;
-  toDateTemp: any;
   hoveredDate: any;
   propagateChange = (_: any) => { };
 
   @ViewChild('ddPanel') ddPanel: NgbDropdown;
   constructor(
-    config: NgbDropdownConfig,
-    calendar: NgbCalendar,
     private momentAdapter: NgbDateMomentAdapter
 
   ) {
@@ -47,7 +39,6 @@ export class NgxDateRangeComponent implements OnInit {
   }
 
   writeValue(obj: any): void {
-    console.log('writeValue', obj);
     this.dateValue = obj;
     if (this.dateValue && this.dateValue.fromDate) {
       this.fromDate = this.momentAdapter.fromModel(this.dateValue.fromDate);
@@ -72,13 +63,10 @@ export class NgxDateRangeComponent implements OnInit {
   }
 
   onChange() {
-    console.log('ngModelChange', this.fromDate, this.toDate);
-
     this.dateValue = {
       fromDate: this.momentAdapter.toModel(this.fromDate),
       toDate: this.momentAdapter.toModel(this.toDate)
     };
-    console.log('ngModelChange', this.dateValue);
     this.writeValue(this.dateValue);
   }
 
