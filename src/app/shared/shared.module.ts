@@ -4,6 +4,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ContextMenuDirective } from './ngx-context-area/content-menu.directive';
+import { NgxContextAreaComponent } from './ngx-context-area/ngx-context-area.component';
 
 @NgModule({
   imports: [
@@ -16,8 +18,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    ContextMenuDirective,
+    NgxContextAreaComponent
   ],
   declarations: [
+    ContextMenuDirective,
+    NgxContextAreaComponent
   ],
   providers: [
   ],
