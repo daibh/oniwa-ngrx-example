@@ -1,5 +1,6 @@
 import { Component, OnInit, forwardRef, OnDestroy, Input } from '@angular/core';
 import { NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms';
+import { Person } from '../model/person.model';
 
 @Component({
   selector: 'ngx-context-area',
@@ -19,7 +20,7 @@ export class NgxContextAreaComponent implements OnInit, OnDestroy, ControlValueA
   propagateChange = (_: any) => { };
 
   @Input() rows = 6;
-  @Input() contextMenu: any[] = ['Pham Thi Huong', 'Vuong Xuan Nu', 'Lam Duc Dat', 'Bui Huu Dai'];
+  @Input() contextMenu: Person[] = [];
 
   constructor() { }
 

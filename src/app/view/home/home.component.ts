@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import * as moment from 'moment';
+import { PersonService } from '../../shared/service/person.service';
+import { Person } from 'src/app/shared/model/person.model';
+
 
 @Component({
   selector: 'app-home',
@@ -9,11 +12,15 @@ import * as moment from 'moment';
 export class HomeComponent implements OnInit {
 
   dateRangeValue: any;
+  contextMenu: Person[];
 
-  constructor() { }
+  constructor(private personService: PersonService) { }
 
   ngOnInit() {
     this.dateRangeValue = { fromDate: moment(), toDate: moment().add(5, 'days') };
+    this.personService.fetchAll().subscribe(data => {
+      this.contextMenu = data
+    });
   }
 
   onChange($event, value) {
