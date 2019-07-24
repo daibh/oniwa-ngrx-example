@@ -1,8 +1,7 @@
-import { Component, OnInit, forwardRef, ViewChild } from '@angular/core';
+import { Component, forwardRef, OnInit, ViewChild } from '@angular/core';
 import { NG_VALUE_ACCESSOR } from '@angular/forms';
-import { NgbDropdownConfig, NgbDateStruct, NgbDate, NgbCalendar, NgbDropdown, NgbDateParserFormatter, NgbDateAdapter } from '@ng-bootstrap/ng-bootstrap';
-import { padNumber, isNumber } from 'src/app/shared/common.util';
-import { after, equals, NgbDateCustomParserFormatter, NgbDateMomentAdapter } from 'src/app/shared/datepicker.util';
+import { NgbDate, NgbDateParserFormatter, NgbDropdown } from '@ng-bootstrap/ng-bootstrap';
+import { NgbDateMomentAdapter, NgbDateCustomParserFormatter } from '../../shared/datepicker.util';
 
 @Component({
   selector: 'ngx-date-range',
