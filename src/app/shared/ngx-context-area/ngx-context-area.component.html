@@ -1,0 +1,10 @@
+<div class="row">
+  <div class="col-12 context-menu-wrapper">
+    <span>About me: </span>
+    <br>
+    <textarea id="txtAboutMe" class="form-control" [rows]="rows" [contextMenu]="contextMenu"></textarea>
+    <ul class="context-menu">
+      <li data-action="{{item}}" *ngFor="let item of contextMenu">{{item}}</li>
+    </ul>
+  </div>
+</div>
