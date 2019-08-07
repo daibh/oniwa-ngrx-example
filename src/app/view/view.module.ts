@@ -20,6 +20,7 @@ import { ViewEffects } from './view.effects';
 import { FEATURE_NAME, reducers } from './view.state';
 import { ActionTrackingEffects } from './action-tracking/action-tracking.effect';
 import { NgxDateRangeComponent } from './ngx-date-range/ngx-date-range.component';
+import { InputMenuContextComponent } from './input-menu-context/input-menu-context.component';
 
 @NgModule({
   imports: [
@@ -50,7 +51,8 @@ import { NgxDateRangeComponent } from './ngx-date-range/ngx-date-range.component
     ChildComponent,
     CancelSubscriptionComponent,
     ActionTrackingComponent,
-    NgxDateRangeComponent
+    NgxDateRangeComponent,
+    InputMenuContextComponent
   ],
   entryComponents: [
     DynamicSample1Component,

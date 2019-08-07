@@ -6,6 +6,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ContextMenuDirective } from './ngx-context-area/content-menu.directive';
 import { NgxContextAreaComponent } from './ngx-context-area/ngx-context-area.component';
+import { TextInputAutocompleteDirective } from './text-input-autocomplete/text-input-autocomplete.directive';
+import { TextInputAutocompleteContainerComponent } from './text-input-autocomplete/text-input-autocomplete-container.component';
+import { TextInputAutocompleteMenuComponent } from './text-input-autocomplete/text-input-autocomplete-menu.component';
 
 @NgModule({
   imports: [
@@ -19,12 +22,19 @@ import { NgxContextAreaComponent } from './ngx-context-area/ngx-context-area.com
     FormsModule,
     ReactiveFormsModule,
     ContextMenuDirective,
-    NgxContextAreaComponent
+    NgxContextAreaComponent,
+    TextInputAutocompleteDirective,
+    TextInputAutocompleteContainerComponent,
+    TextInputAutocompleteMenuComponent
   ],
   declarations: [
     ContextMenuDirective,
-    NgxContextAreaComponent
+    NgxContextAreaComponent,
+    TextInputAutocompleteDirective,
+    TextInputAutocompleteContainerComponent,
+    TextInputAutocompleteMenuComponent
   ],
+  entryComponents: [TextInputAutocompleteMenuComponent],
   providers: [
   ],
   schemas: [NO_ERRORS_SCHEMA]

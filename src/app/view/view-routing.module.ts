@@ -7,6 +7,7 @@ import { RuntimeComponent } from './runtime/runtime.component';
 import { BehaviorSubjectComponent } from './behavior-subject/behavior-subject.component';
 import { CancelSubscriptionComponent } from './cancel-subscription/cancel-subscription.component';
 import { ActionTrackingComponent } from './action-tracking/action-tracking.component';
+import { InputMenuContextComponent } from './input-menu-context/input-menu-context.component';
 
 const routes: Routes = [
   {
@@ -62,6 +63,13 @@ const routes: Routes = [
         component: ActionTrackingComponent,
         data: {
           title: 'Action tracking'
+        }
+      },
+      {
+        path: 'input-menu-context',
+        component: InputMenuContextComponent,
+        data: {
+          title: 'Input menu context'
         }
       }
     ],

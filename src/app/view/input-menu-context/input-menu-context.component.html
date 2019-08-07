@@ -1,0 +1,12 @@
+<mwl-text-input-autocomplete-container>
+  <textarea
+    placeholder="Type @ to search..."
+    class="form-control"
+    rows="5"
+    [(ngModel)]="formControlValue"
+    mwlTextInputAutocomplete
+    [findChoices]="findChoices"
+    [resource]="names"
+    [getChoiceLabel]="getChoiceLabel">
+  </textarea>
+</mwl-text-input-autocomplete-container>
